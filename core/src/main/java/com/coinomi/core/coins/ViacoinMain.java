@@ -9,7 +9,7 @@ public Class ViacoinMain extends BitFamily {
         addressHeader = 71;
         p2shHeader = 33;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
-        spendableCoinbaseDepth = 100;
+        spendableCoinbaseDepth = 3600;
         dumpedPrivateKeyHeader = 199;
 
         name = "Viacoin";
@@ -17,8 +17,8 @@ public Class ViacoinMain extends BitFamily {
         uriScheme  = "viacoin";
         bip44Index = 14;
         unitExponent = 8;
-        feeValue = value(100000);
-        minNonDust = value(1000); // VIA miniput
+        feeValue = value(10000);
+        minNonDust = value(100000); // VIA miniput
         softDusLimit = value(100000); // 0.001 VIA
         softDustPolicy = SoftDustPolicy.BASE_FEE_FOR_EACH_SOFT_DUST_TXO;
         signedMessageHeader = toBytes("Viacoin Signed Message:\n");
